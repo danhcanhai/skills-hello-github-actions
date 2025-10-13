@@ -1,39 +1,39 @@
-<header>
+# NestJS GraphQL Prisma Boilerplate
 
-# Hello GitHub Actions - Test change github readme file
+This is a boilerplate project for building a NestJS application with GraphQL, Prisma, and PostgreSQL.
 
-_Create and run a GitHub Actions workflow._
+## Installation
 
-</header>
+```bash
+$ npm install
+```
 
-## Finish
+## Running the app
 
-_Congratulations friend, you've completed this course!_
+```bash
+# development
+$ npm run start
 
-<img src=https://octodex.github.com/images/jetpacktocat.png alt="Mona the Octocat wearing a jetpack and smiling." width=300 align=right>
+# watch mode
+$ npm run start:dev
 
-Here's a recap of all the tasks you've accomplished in your repository:
+# production mode
+$ npm run start:prod
+```
 
-- You've created your first GitHub Actions workflow file.
-- You learned where to make your workflow file.
-- You defined an event trigger, a job, and a step for your workflow.
-- You're ready to automate anything you can dream of.
+## Database
 
-### What's next?
+To set up the database, you will need to have PostgreSQL installed and running.
 
-- Learn more about GitHub Actions by reading "[Learn GitHub Actions](https://docs.github.com/actions/learn-github-actions)"
-- Use actions created by others in [awesome-actions](https://github.com/sdras/awesome-actions)
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/hello-github-actions)
-- [Take another course on GitHub Actions](https://skills.github.com/#automate-workflows-with-github-actions)
-- Learn more about GitHub by reading the "[Get started](https://docs.github.com/get-started)" docs
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore)
+1.  Create a `.env` file from the `.env.example` file and update the `DATABASE_URL` with your database connection string.
+2.  Run the following command to create and apply the initial migration:
 
-<footer>
+    ```bash
+    $ npx prisma migrate dev
+    ```
 
----
+3.  Run the following command to seed the database with initial data:
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/hello-github-actions) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+    ```bash
+    $ npm run seed
+    ```
